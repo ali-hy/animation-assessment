@@ -411,13 +411,17 @@ h1.title {
 
 .clouds :nth-child(1) {
     top: 0;
+    -moz-animation: cloud-slide 30s linear infinite backwards;
     animation: cloud-slide 30s linear infinite backwards;
+    -webkit-animation: cloud-slide 30s linear infinite backwards;
 }
 
 .clouds :nth-child(2) {
     top: 20%;
     bottom:auto;
+    -moz-animation: cloud-slide 30s linear reverse infinite backwards;
     animation: cloud-slide 30s linear reverse infinite backwards;
+    -webkit-animation: cloud-slide 30s linear reverse infinite backwards;
 }
 
 @keyframes cloud-slide {
@@ -432,5 +436,32 @@ h1.title {
     }
     100% {
         left: 100vw;
+    }
+}
+
+.scale-up.delay500 {
+    -moz-animation: scale-up 0.5s ease 2500ms both;
+    -webkit-animation: scale-up 0.5s ease 2500ms both;
+    animation: scale-up 0.5s ease 2500ms both;
+}
+
+.scale-up.delay1000 {
+    -moz-animation: scale-up 0.5s ease 3000ms both;
+    -webkit-animation: scale-up 0.5s ease 3000ms both;
+    animation: scale-up 0.5s ease 3000ms both;
+}
+
+.scale-up {
+    -moz-animation: scale-up 0.5s ease 2000ms;
+    -webkit-animation: scale-up 0.5s ease 2000ms;
+    animation: scale-up 0.5s ease 2000ms;
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0.01);
+    }
+    100% {
+        transform: scale(1);
     }
 }
