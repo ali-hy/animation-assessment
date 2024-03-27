@@ -8,6 +8,7 @@ body {
     width: 100%;
     position: relative;
     background: linear-gradient(#ffdcaf, #ff9482);
+    overflow: hidden;
 }
 
 .intro-section::before {
@@ -201,7 +202,7 @@ h1.title {
     width: 30vw;
     height: 30vw;
     margin: 0 auto;
-    margin-top: -4rem;
+    margin-top: -4.8vw;
     margin-bottom: -20%;
     border-radius: 100%;
     background-color: #fff6da;
@@ -283,7 +284,7 @@ h1.title {
     justify-content: center;
     text-align: center;
     gap: 10%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 
 .center-piece .tooltip-container {
@@ -323,11 +324,11 @@ h1.title {
 
 .mouse-container {
     position: absolute;
-    -moz-animation: floating 1s ease-in-out infinite 0s alternate forwards;
-    animation: floating 1s ease-in-out infinite 0s alternate forwards;
-    -webkit-animation: floating 1s ease-in-out infinite 0s alternate forwards;
+    -moz-animation: floating 0.7s ease-in-out infinite 0s alternate forwards;
+    animation: floating 0.7s ease-in-out infinite 0s alternate forwards;
+    -webkit-animation: floating 0.7s ease-in-out infinite 0s alternate forwards;
     left: 50%;
-    bottom: 2.5vw;
+    bottom: 1.5vw;
     transform: translate(-50%, 0px);
 }
 
@@ -347,7 +348,6 @@ h1.title {
 /* buildings and bg */
 .bg-container {
     position: relative;
-    overflow: hidden;
 }
 
 .bg-element {
@@ -463,5 +463,22 @@ h1.title {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+.plane {
+    animation: plane-fly 7s linear 2s both;
+    width: 8vw;
+    transform: rotate(5deg);
+}
+
+@keyframes plane-fly {
+    0%{
+        right: 10vw;
+        bottom: 0;
+    }
+    100%{
+        right: 100vw;
+        bottom: 130%;
     }
 }
